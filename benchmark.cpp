@@ -8,9 +8,7 @@
 
 using namespace std;
 
-// =====================================================================
 // 1. 原生 malloc / free 压测
-// =====================================================================
 void BenchmarkMalloc(size_t ntimes, size_t nworks, size_t rounds)
 {
     vector<thread> vthread(nworks);
@@ -58,9 +56,7 @@ void BenchmarkMalloc(size_t ntimes, size_t nworks, size_t rounds)
         nworks, nworks * rounds * ntimes, malloc_costtime.load() + free_costtime.load());
 }
 
-// =====================================================================
 // 2. 自研内存池压测
-// =====================================================================
 void BenchmarkConcurrentMalloc(size_t ntimes, size_t nworks, size_t rounds)
 {
     vector<thread> vthread(nworks);
