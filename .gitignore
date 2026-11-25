@@ -1,0 +1,13 @@
+# redmin模块暂时不上传
+redmin/
+
+# C/C++ 编译产物
+*.o
+*.out
+*.a
+*.so
+build/
+cmake-build-*/
+bin/
+log/
+.DS_Store
